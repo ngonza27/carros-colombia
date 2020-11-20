@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="inicio_header">
+    <h1 class="bigger-text">Carros colombia</h1>
+    <p class="big-text">Bienvenido al centro de la comunidad automotriz de Colombia. Aca podras emcontrar informacion
+        sobre
+        vehiculos,
+        clubs, y talleres para cada necesidad.</p>
+    <br>
+</div>
+
+<div class="inicio_stage">
+    <h1 class="bigger-text">Stage</h1>
+    <p class="inicio_stage_info big-text"> Los "stage", son las diferentes fases de modificaciones las cuales un carro
+        puede
+        tener</p>
+    <div class="inicio_stage_stage1">
+        <h3 class="bigger-text">Stage 1</h3>
+        <p class="big-text">El Stage 1, es la primera fase de las modificaciones, normalmente no consiste en cambiar
+            partes fisicas del
+            carro</p>
+        <ul>
+            <li class="big-text">Reprogramacion</li>
+        </ul>
+    </div>
+    <br>
+    <div class="inicio_stage_stage2">
+        <h3 class="bigger-text">Stage 2</h3>
+        <p class="big-text">El Stage 2, inician las modificaciones fisicas del carro. Los siguientes elementos son
+            modificados:</p>
+        <ul>
+            <li class="big-text">Admision del motor</li>
+            <li class="big-text">Tubo de escape</li>
+            <li class="big-text">Filtro de aire</li>
+            <li class="big-text">Intercooler</li>
+        </ul>
+    </div>
+    <br>
+    <div class="inicio_stage_stage3">
+        <h3 class="bigger-text">Stage 3</h3>
+        <p class="big-text">El Stage 3, siendo la ultima fase se trata de cambiar componentes de fabrica por otros de
+            mayor rendimiento
+        </p>
+        <ul>
+            <li class="big-text">Bombas</li>
+            <li class="big-text">Frenos</li>
+            <li class="big-text">Turbo</li>
+            <li class="big-text">Arboles de levas</li>
+            <li class="big-text">Inyectores</li>
+            <li class="big-text">Pistones forjados</li>
+            <li class="big-text">Suspension</li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="inicio_transmision">
+    <h1 class="bigger-text">Transmision</h1>
+    <p class="big-text">Los carros tienen diferentes disposiciones de transmision. Esta seccion explica cuales hay y sus
+        caracteristicas
+    </p>
+</div>
+<div class="inicio_transmision_cartas">
+    <div class="card">
+        <div class="card-circle">
+            <img src="../static/assets/fwd.jpeg" class="transmision_img" alt="My test image">
+        </div>
+        <div class="text-content">
+            <span class=card-title><strong>FWD (Front Wheel Drive)</strong></span>
+            <p class="big-text">El FWD hace referencia a los carros con traccion en las llantas delanteras del carro.
+            </p>
+            <h4>Caracteristicas</h4>
+            <ul>
+                <li>Mayor facilidad de conduccion en condifiones adversas.</li>
+                <li>Mayor peso en la parte posterior del carro.</li>
+                <li>Menor costo de fabricacion.</li>
+                <li>Tendencia a subvirar en las curvas, la parte posterior del carro sigue derecho en vez de girar.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-circle">
+            <img src="../static/assets/rwd.jpeg" class="transmision_img" alt="My test image">
+        </div>
+        <div class="text-content">
+            <span class=card-title><strong>RWD (Rear Wheel Drive)</strong></span>
+            <p class="big-text">El RWD hace referencia a los carros con traccion en las traseras del carro.</p>
+            <h4>Caracteristicas</h4>
+            <ul>
+                <li>Mejor distribucion de peso.</li>
+                <li>Mayor dificultad de conduccion en condifiones adversas.</li>
+                <li>Tendencia a sobrevirar en las curvas, al perder agarre en las llantas traseras esta se desliza con
+                    una trayectoria mayor a la de la curva.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-circle">
+            <img src="../static/assets/awd.jpeg" class="transmision_img" alt="My test image">
+        </div>
+        <div class="text-content">
+            <span class=card-title><strong>AWD (All Wheel Drive)</strong></span>
+            <p class="big-text">El AWD hace referencia a los carros con traccion integral en todas las llantas del
+                carro.
+            </p>
+            <h4>Caracteristicas</h4>
+            <ul>
+                <li>Mejor aceleracion.</li>
+                <li>Mejor adherencia al pavimento.</li>
+                <li>Mayor costo de fabricacion.</li>
+                <li>Al perder traccion en una curva es complicado retomar el control, es necesario bajar la velocidad
+                    sin perder mas traccion.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

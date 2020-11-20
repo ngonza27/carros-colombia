@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/base.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/index.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/carslist.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/carpage.css') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link src="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Carros Colombia</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="padding: 5px 0;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ url_for('index') }}" style="font-size: x-large; color:white;">Carros
+          Colombia</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('carslist')}}" style="font-size: large; color: white;">Marcas</a></li>
+        <li><a href="{{ url_for('clubs')}}" style="font-size: large; color: white;">Clubs</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+
+</html>

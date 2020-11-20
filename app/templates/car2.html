@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="top_container">
+    <div class="top_left">
+        <h1 class="big-text-bigger">{{ car.carname }}</h1>
+        {% if car.carimage == None %}
+        <img src="{{ car.avatar(128) }}">
+        {% else %}
+        <img src="{{ car.carimage }}" style="width: 474; height: 275;">
+        {% endif %}
+    </div>
+
+    <div class="top_right">
+        <table>
+            <tr valign="top">
+                <td></td>
+            <tr>
+                <h1 class="big-text-bigger">Descripcion: {{ car.cardescription }}</h1>
+            </tr>
+            <tr>
+                <h1 class="big-text-bigger">Caballos de fuerza: {{ car.carhp }}</h1>
+            </tr>
+            <tr>
+                <h1 class="big-text-bigger">Torque: {{ car.cartorque }}</h1>
+            </tr>
+            <tr>
+                <h1 class="big-text-bigger">Precio: {{ car.carprice }}</h1>
+            </tr>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="comentarios" style="padding-bottom: 250;">
+    <h1 class="big-text-bigger">Comentarios</h1>
+    <form action="{{ url_for('car', carname=carname) }}" method="post">
+        {{ form.hidden_tag() }}
+        <p class="big-text-custom">
+        <p class="big-text">{{ form.username.label }}</p>
+        {{ form.username(size=32) }}
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        </p>
+        <p class="big-text-custom">
+        <p class="big-text">{{ form.comment.label }}</p>
+        {{ form.comment(size=128) }}
+        {% for error in form.comment.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% for post in posts %}
+    <table>
+        <tr valign="top" class="comment_row">
+            <td><img src="{{ post.author.avatar(36) }}"></td>
+            <td class="comment_content">{{ post.name }} says:<br>{{ post.body }}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>
+{% endblock %}

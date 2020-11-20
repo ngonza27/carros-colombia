@@ -1,0 +1,18 @@
+pip install flask
+pip install python-dotenv
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install Flask-WhooshAlchemy
+pip install elasticsearch
+
+
+Crear los Carros asi desde el shell:
+u = Car(carname='BMW 330e', carhp='288Hp', cartorque='420Nm', cardescription='Carro para mercar que es muy rapido', carprice='123,000,000', carbrand='bmw', carimage='https://th.bing.com/th/id/OIP.kEVcrmmw_7bFifTJdqCeKAHaEQ?pid=Api&rs=1')
+u = Car(carname='Corolla Hibrido', carhp='122Hp', cartorque='142Nm', cardescription='Si es Toyota es confiable', carprice='90,000,000', carbrand='toyota', carimage='https://cdn.motor1.com/images/mgl/YXzj0/s1/2020-toyota-corolla-hybrid.jpg')
+u = Car(carname='Raptor', carhp='450Hp', cartorque='500Nm', cardescription='Entre mas grande mejor', carprice='245,000,000', carbrand='ford', carimage='https://i.ytimg.com/vi/tlTWUSV9Zns/maxresdefault.jpg')
+
+u = Car(carname='Q5', carhp='265Hp', cartorque='370Nm', cardescription='Avances tecnológicos', carprice='160,000,000', carbrand='audi', carimage='https://www.carscoops.com/wp-content/uploads/2020/07/2021-audi-q5-sportback-renderings-0.jpg')
+
+db.session.add(u)
+db.session.commit()

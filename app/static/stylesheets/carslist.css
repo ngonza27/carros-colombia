@@ -1,0 +1,20 @@
+.brands_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 70px 100px !important;
+}
+
+.collapse {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.big-text-bigger {
+  font-size: xx-large;
+  color: white;
+  align-content: center;
+}

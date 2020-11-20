@@ -1,0 +1,24 @@
+.top_container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 800px 800px;
+    align-items:center;
+    justify-content:center;
+}
+
+.comentarios {
+    padding: 1rem 10rem;
+}
+
+.comment_row {
+    height: 50px;
+}
+    
+.comment_content {
+    padding: 0 10px 5px 10px;
+    color: white;
+}
+
+.big-text-custom {
+    font-size: large;
+}

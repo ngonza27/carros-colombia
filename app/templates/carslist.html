@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="brands_container">
+    {% for brand in car_brands_info %}
+    <div class="brands_item" style="padding-top: 50px; margin-bottom: 500px;">
+        <button type="button" class="btn btn-info button" data-toggle="collapse" data-target="#{{brand[0].carbrand}}"
+            style="background-color: #262626; border-color:#262626;">
+            <img src="https://www.carlogos.org/car-logos/{{brand[0].carbrand}}-logo.png"
+                alt={{brand[0].carbrand}}></button>
+        <div id="{{brand[0].carbrand}}" class="collapse" style="background-color: black;">
+            {% for car in brand%}
+            <table>
+                <tr valign="top">
+                    <a class="big-text" href="{{ url_for('car', carname=car.carname) }}">{{car.carname}}</a>
+                </tr>
+            </table>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
